@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+</head>
+<body>
+<script>
+	/*window.onload= function()
+	{
+		document.getElementById("btn").addEventListener('click', clickHandler, false);
+	};*/
+
+	window.onload= function()
+	{
+		if(document.addEventListener){
+		document.getElementById("btn").addEventListener('click', clickHandler, false);
+		}
+		else{
+			document.getElementById("btn").attachEvent('click', clickHandler);
+		}
+	};
+
+	function clickHandler(){
+		alert("Thank you we have handle the addEventListener and attachEvent");
+	}
+</script>
+
+<input type="button" id="btn" name="btn" value="Click me...">
+
+
+</body>
+</html>
