@@ -4,16 +4,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
-
+    <script src="jquery-1.12.4.js"></script>
 </head>
 <body>
 <script>
 	/*window.onload= function()
-	{
-		document.getElementById("btn").addEventListener('click', clickHandler, false);
-	};*/
-
-	window.onload= function()
 	{
 		if(document.addEventListener){
 		document.getElementById("btn").addEventListener('click', clickHandler, false);
@@ -25,7 +20,13 @@
 
 	function clickHandler(){
 		alert("Thank you we have handle the addEventListener and attachEvent");
-	}
+	}*/
+
+	$(document).ready(function(){
+		$('#btn').click(function(){
+			alert("Thank you using jQuery");
+		})
+	})
 </script>
 
 <input type="button" id="btn" name="btn" value="Click me...">
